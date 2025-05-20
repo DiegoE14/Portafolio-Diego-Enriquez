@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portafolio Diego Enriquez</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+        body {
+            scroll-behavior: smooth;
+            background: #f8f9fa;
+        }
+
+        nav.navbar {
+            background: #343a40;
+        }
+
+        nav.navbar .nav-link,
+        nav.navbar .navbar-brand {
+            color: #fff;
+            transition: color 0.3s;
+        }
+
+        nav.navbar .nav-link:hover {
+            color: #0d6efd;
+        }
+
+        .welcome-section {
+            background: linear-gradient(135deg, #0d6efd 0%, #6f42c1 100%);
+            color: white;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .welcome-section img {
+            max-width: 300px;
+            border-radius: 50%;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .section-title {
+            border-bottom: 3px solid #0d6efd;
+            padding-bottom: 5px;
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+
+        .project-card:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+            box-shadow: 0 8px 20px rgba(13, 110, 253, 0.3);
+        }
+
+        footer {
+            background: #343a40;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        /* Animaciones sutiles */
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn ease 1s forwards;
+            animation-delay: 0.3s;
+        }
+
+        #welcome{
+            padding-top: 90px;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top shadow-sm py-3 bg-white navbar-light">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary fs-4" href="#">Diego Enriquez</a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav fw-semibold gap-lg-4 text-center">
+                    <li class="nav-item">
+                        <a class="nav-link active text-dark px-2" href="#welcome">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark px-2" href="#about">Sobre mí</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark px-2" href="#experience">Experiencia laboral</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark px-2" href="#education">Educación</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark px-2" href="#projects">Proyectos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark px-2" href="#contact">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <style>
+        .navbar-nav .nav-link {
+            transition: all 0.3s ease-in-out;
+            position: relative;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #2563EB !important;
+        }
+
+        .navbar-nav .nav-link::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #2563EB;
+            transition: width 0.3s ease-in-out;
+            margin: auto;
+        }
+
+        .navbar-nav .nav-link:hover::after {
+            width: 60%;
+        }
+
+        /* Estilo al hacer scroll */
+        .navbar.scrolled {
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            background-color: #ffffff !important;
+            transition: all 0.3s ease-in-out;
+        }
+    </style>
+
+    <!-- Welcome Section -->
+    <section id="welcome" class="welcome-section text-center text-md-start px-4 px-md-5">
+        <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between">
+            <div class="text-white fade-in">
+                <h1 class="display-4 fw-bold">Hola, soy Diego Enriquez</h1>
+                <p class="lead">Desarrollador web | Apasionado por crear experiencias digitales únicas</p>
+                <a href="#projects" class="btn btn-light btn-lg mt-3">Ver mis proyectos</a>
+            </div>
+            <img src="https://avatars.githubusercontent.com/u/9919?s=280&v=4" alt="Foto de Diego"
+                class="mt-4 mt-md-0" />
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5 px-4 px-md-5 bg-white">
+        <div class="container">
+            <h2 class="section-title text-primary">Sobre mí</h2>
+            <div class="row text-center text-md-start">
+                <div class="col-md-4 mb-4 fade-in">
+                    <i class="fa-solid fa-laptop-code fa-3x text-primary mb-3"></i>
+                    <h4>Desarrollo</h4>
+                    <p>Construyo sitios web modernos, responsivos y accesibles usando las mejores prácticas.</p>
+                </div>
+                <div class="col-md-4 mb-4 fade-in" style="animation-delay: 0.5s;">
+                    <i class="fa-solid fa-paintbrush fa-3x text-primary mb-3"></i>
+                    <h4>Diseño</h4>
+                    <p>Me encanta diseñar interfaces intuitivas y atractivas que cautiven a los usuarios.</p>
+                </div>
+                <div class="col-md-4 mb-4 fade-in" style="animation-delay: 0.7s;">
+                    <i class="fa-solid fa-rocket fa-3x text-primary mb-3"></i>
+                    <h4>Innovación</h4>
+                    <p>Siempre busco nuevas tecnologías y métodos para mejorar mis proyectos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experiencia Laboral -->
+    <section id="experience" class="py-5 px-4 px-md-5">
+        <div class="container">
+            <h2 class="section-title text-primary text-center mb-5 fw-bold">Experiencia Laboral</h2>
+
+            <div class="timeline-horizontal d-flex align-items-start justify-content-between flex-wrap">
+
+                <div class="timeline-item text-center" style="flex-basis: 15%; min-width: 150px;">
+                    <div class="timeline-point mb-3">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Logo_TV_2015.png" alt="Empresa 1"
+                            class="logo">
+                    </div>
+                    <h5 class="fw-semibold mb-1">Desarrollador Frontend</h5>
+                    <p class="mb-1"><strong>Empresa ABC</strong></p>
+                    <small class="text-muted">Ene 2023 - Presente</small>
+                </div>
+
+                <div class="timeline-item text-center" style="flex-basis: 18%; min-width: 150px;">
+                    <div class="timeline-point mb-3">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg"
+                            alt="Empresa 2" class="logo">
+                    </div>
+                    <h5 class="fw-semibold mb-1">Desarrollador Web Junior</h5>
+                    <p class="mb-1"><strong>Empresa XYZ</strong></p>
+                    <small class="text-muted">Jun 2021 - Dic 2022</small>
+                </div>
+
+                <div class="timeline-item text-center" style="flex-basis: 20%; min-width: 150px;">
+                    <div class="timeline-point mb-3">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Google_Logo.svg" alt="Empresa 3"
+                            class="logo">
+                    </div>
+                    <h5 class="fw-semibold mb-1">Intern de Software</h5>
+                    <p class="mb-1"><strong>Google</strong></p>
+                    <small class="text-muted">Jul 2020 - May 2021</small>
+                </div>
+
+                <div class="timeline-item text-center" style="flex-basis: 17%; min-width: 150px;">
+                    <div class="timeline-point mb-3">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg"
+                            alt="Empresa 4" class="logo">
+                    </div>
+                    <h5 class="fw-semibold mb-1">Practicante TI</h5>
+                    <p class="mb-1"><strong>Microsoft</strong></p>
+                    <small class="text-muted">Mar 2019 - Jun 2020</small>
+                </div>
+
+                <div class="timeline-item text-center" style="flex-basis: 20%; min-width: 150px;">
+                    <div class="timeline-point mb-3">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Facebook_logo_%282019%29.svg"
+                            alt="Empresa 5" class="logo">
+                    </div>
+                    <h5 class="fw-semibold mb-1">Asistente de Proyectos</h5>
+                    <p class="mb-1"><strong>Facebook</strong></p>
+                    <small class="text-muted">Ene 2018 - Feb 2019</small>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .timeline-horizontal {
+            padding: 40px 0 20px;
+        }
+
+        .timeline-item {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .timeline-point {
+            width: 60px;
+            height: 60px;
+            background-color: #fff;
+            border: 3px solid #0d6efd;
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 6px rgba(13, 110, 253, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .timeline-point:hover {
+            transform: scale(1.15);
+            box-shadow: 0 0 12px rgba(13, 110, 253, 0.6);
+        }
+
+        .timeline-point img.logo {
+            max-width: 40px;
+            max-height: 40px;
+            object-fit: contain;
+        }
+
+        h5 {
+            font-size: 1rem;
+            line-height: 1.2;
+            word-break: break-word;
+        }
+
+        p,
+        small {
+            margin: 0;
+            font-size: 0.875rem;
+        }
+
+        small {
+            color: #6c757d;
+        }
+
+        /* Responsive para móviles */
+        @media (max-width: 768px) {
+            .timeline-horizontal {
+                padding-left: 0;
+            }
+
+            .timeline-item {
+                flex-basis: 100% !important;
+                min-width: auto !important;
+                margin-bottom: 40px;
+                align-items: flex-start;
+                text-align: left;
+                flex-direction: row;
+                gap: 15px;
+            }
+
+            .timeline-point {
+                margin: 0;
+            }
+
+            .timeline-item h5 {
+                font-size: 1.1rem;
+                line-height: 1.3;
+            }
+        }
+    </style>
+
+
+    <!-- Educación -->
+    <section id="education" class="py-5 px-4 px-md-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-primary text-center mb-5">Educación</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <h5 class="mb-1">Ingeniería en Sistemas</h5>
+                            <p class="mb-1">Universidad Nacional - 2017 a 2021</p>
+                        </li>
+                        <li class="list-group-item">
+                            <h5 class="mb-1">Curso de React Avanzado</h5>
+                            <p class="mb-1">Platzi - 2023</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Botón para descargar CV -->
+    <section class="py-4 px-4 px-md-5 text-center">
+        <a href="tu-cv.pdf" download class="btn btn-primary btn-lg">
+            <i class="fa-solid fa-file-arrow-down me-2"></i> Descargar CV
+        </a>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-5 px-4 px-md-5">
+        <div class="container">
+            <h2 class="section-title text-primary text-center mb-5">Proyectos Destacados</h2>
+            <div class="row g-4">
+
+                <div class="col-md-4 fade-in">
+                    <div class="card project-card h-100 shadow-sm">
+                        <img src="https://www.tutkit.com/storage/media/text-tutorials/2927/anleitung-wie-funktioniert-twitter-244.webp?tutkfid=226304" class="card-img-top"
+                            alt="Proyecto 1" />
+                        <div class="card-body">
+                            <h5 class="card-title">Proyecto Uno</h5>
+                            <p class="card-text">Una aplicación web para administrar tareas y mejorar productividad.</p>
+                            <a href="#" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 fade-in" style="animation-delay: 0.3s;">
+                    <div class="card project-card h-100 shadow-sm">
+                        <img src="https://www.tutkit.com/storage/media/text-tutorials/2927/anleitung-wie-funktioniert-twitter-244.webp?tutkfid=226304" class="card-img-top"
+                            alt="Proyecto 2" />
+                        <div class="card-body">
+                            <h5 class="card-title">Proyecto Dos</h5>
+                            <p class="card-text">Sitio web de comercio electrónico con diseño responsivo y pasarela de
+                                pagos.</p>
+                            <a href="#" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 fade-in" style="animation-delay: 0.6s;">
+                    <div class="card project-card h-100 shadow-sm">
+                        <img src="https://www.tutkit.com/storage/media/text-tutorials/2927/anleitung-wie-funktioniert-twitter-244.webp?tutkfid=226304" class="card-img-top"
+                            alt="Proyecto 3" />
+                        <div class="card-body">
+                            <h5 class="card-title">Proyecto Tres</h5>
+                            <p class="card-text">Portfolio interactivo con animaciones y diseño moderno.</p>
+                            <a href="#" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 px-4 px-md-5 bg-white">
+        <div class="container">
+            <h2 class="section-title text-primary text-center mb-4">Contacto</h2>
+            <form action="https://formspree.io/f/xqaqjlwg" method="POST" class="mx-auto" style="max-width: 600px;">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Tu nombre" required />
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Correo electrónico</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="tu@email.com"
+                        required />
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Mensaje</label>
+                    <textarea class="form-control" id="message" name="message" rows="4"
+                        placeholder="Escribe tu mensaje aquí..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p class="mb-0">&copy; 2025 Diego Enriquez. Todos los derechos reservados.</p>
+            <p class="mb-0">
+                <a href="#" class="text-white me-3"><i class="fab fa-github"></i></a>
+                <a href="#" class="text-white me-3"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="text-white"><i class="fab fa-twitter"></i></a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+
+<script>
+    // Cambiar navbar al hacer scroll
+    window.addEventListener('scroll', () => {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 20) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+</script>
